@@ -14,6 +14,7 @@ def google(matricula):
 
 while True:
     # menu principal
+    os.system('cls')
     print(cipal)
     C = int(input())
 
@@ -29,6 +30,12 @@ while True:
         os.system("cls")
         for aluno in alunos:
             print(aluno)
+        print('Aperte qualquer tecla para voltar ao menu principal')
+        x = input()
+        if x == 0:
+            print('Voltando')
+        else:
+            print('voltando')
     elif C == 3:
         os.system("cls")
         ID = int(input("Matricula do aluno: "))
@@ -38,14 +45,17 @@ while True:
             aluno["Nota"] = int(input("Digite a nova nota aqui: "))
             print("Nota Atualizada com suscesso")
     elif C == 4:
-        os.system("cls")
-        ID = int(input("Matricula do aluno: "))
-        aluno = google(ID)
-        if aluno:
-            alunos.remove(aluno)
-            print("Aluno excluido com suscesso")
-        else:
-            print("Aluno não encontrado")
+        y = 0
+        while y < 1:
+            os.system("cls")
+            ID = int(input("Matricula do aluno: "))
+            aluno = google(ID)
+            if aluno:
+                alunos.remove(aluno)
+                y += 1
+                print("Aluno excluido com suscesso")
+            else:
+                print("Aluno não encontrado")
     elif C == 5:
         os.system("cls")
         print("Saindo...")
