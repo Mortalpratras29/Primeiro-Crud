@@ -15,13 +15,4 @@ cadastro = """
     ID do Aluno: 
 
 """
-
-assentos = """
-    || Bilhetes Python || 
-
-    1- Assento Simples R$ 10
-    2- Assento Confort R$ 20
-    3- Assento Deluxe  R$ 35
-
-    4- Voltar
-"""
+1
